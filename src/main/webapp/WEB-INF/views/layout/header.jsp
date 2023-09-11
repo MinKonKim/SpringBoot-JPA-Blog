@@ -22,8 +22,8 @@
 <body>
 
 <div class="jumbotron text-center" style="margin-bottom:0">
-    <h1>My First Bootstrap 4 Page</h1>
-    <p>Resize this responsive page to see the effect!</p>
+    <h1>My First Blog</h1>
+    <p>어서오세요 제 블로그에 오신걸 환영합니다! :) </p>
 </div>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
