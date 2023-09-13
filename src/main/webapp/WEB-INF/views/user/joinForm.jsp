@@ -12,7 +12,7 @@
         </div>
         <div class="form-group">
             <label for="uemail">Email:</label>
-            <input type="text" class="form-control" id="uemail" placeholder="Enter Email" name="uemail" required>
+            <input type="email" class="form-control" id="uemail" placeholder="Enter Email" name="uemail" required>
             <div class="valid-feedback">Valid.</div>
             <div class="invalid-feedback">Please fill out this field.</div>
         </div>
@@ -25,7 +25,7 @@
     </form>
     <button id="btn-save" class="btn btn-primary">회원가입완료</button>
 </div>
-<script src="/blog/js/user.js"></script>
+<script src="/js/user.js"></script>
 <%@ include file="../layout/footer.jsp"%>
 
 
