@@ -8,13 +8,13 @@
         <input type="hidden" id="id" value="${principal.user.id}"/>
         <div class="form-group">
             <label for="uname">Username:</label>
-            <input type="text" value="${principal.user.name}" class="form-control" id="uname" placeholder="Enter username" name="uname" required readonly>
+            <input type="text" value="${principal.user.username}" class="form-control" id="uname" placeholder="Enter username" name="uname" required readonly>
             <div class="valid-feedback">Valid.</div>
             <div class="invalid-feedback">Please fill out this field.</div>
         </div>
         <div class="form-group">
             <label for="uemail">Email:</label>
-            <input type="email" value="${principal.user.emil}" class="form-control" id="uemail" placeholder="Enter Email" name="uemail" required>
+            <input type="email" value="${principal.user.email}" class="form-control" id="uemail" placeholder="Enter Email" name="uemail" required>
             <div class="valid-feedback">Valid.</div>
             <div class="invalid-feedback">Please fill out this field.</div>
         </div>

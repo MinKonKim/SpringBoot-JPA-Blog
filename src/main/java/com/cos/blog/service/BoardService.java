@@ -17,6 +17,8 @@ import java.util.List;
 public class BoardService {
     @Autowired
     private BoardRepository boardRepository;
+
+
     @Transactional
     public void 글쓰기(Board board, User user) {
 
