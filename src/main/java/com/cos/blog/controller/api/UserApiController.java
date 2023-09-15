@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,7 +33,12 @@ public class UserApiController {
 
 
 
-
+    @PutMapping("/user")
+    public ResponseDto<Integer> update(@RequestBody User user){
+        userService.회원수정(user);
+        //DB값은 변경됬지만 session값은 변경되지 않았다.
+        return new ResponseDto<Integer>(HttpStatus.OK.value(),1);
+    }
 
 
 

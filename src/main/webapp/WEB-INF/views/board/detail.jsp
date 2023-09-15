@@ -11,7 +11,7 @@
         </c:if>
         <br/><br/>
         <div>
-            글 번호: <span id="bid"><i>${board.id}</i></span>
+            글 번호: <span id="id"><i>${board.id}</i></span>
             작성자: <span><i>${board.user.username}</i></span>
         </div>
         <br/>
@@ -26,7 +26,8 @@
         <button id="btn-save" class="btn btn-primary">완료</button>
     </div>
 </div>
-
+<%@ include file="../fontStyle.jsp"%>
+<script src="/js/summerNoteManager.js"></script>
 <script src="/js/board.js"></script>
 <%@ include file="../layout/footer.jsp"%>
 
