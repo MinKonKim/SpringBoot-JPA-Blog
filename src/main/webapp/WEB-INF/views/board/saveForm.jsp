@@ -1,4 +1,6 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.js"></script>
 
 <%@ include file="../layout/header.jsp"%>
 <div class="container" style="margin-top:30px">
@@ -18,7 +20,29 @@
       <button id="btn-save" class="btn btn-primary">완료</button>
    </div>
 </div>
+
+<!-- 스타일 직접 정의 -->
+<style>
+   /* Summernote 텍스트 스타일 변경 예제 */
+   .note-editable p {
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      color: #333;
+   }
+
+   /* Summernote 버튼 스타일 변경 예제 */
+   .note-btn {
+      background-color: #000;
+      color: #fff;
+   }
+</style>
 <script src="/js/board.js"></script>
+<script>
+   $(document).ready(function() {
+      $('.summernote').summernote();
+   });
+</script>
+
 <%@ include file="../layout/footer.jsp"%>
 
 

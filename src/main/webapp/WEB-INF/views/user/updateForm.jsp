@@ -12,18 +12,17 @@
             <div class="valid-feedback">Valid.</div>
             <div class="invalid-feedback">Please fill out this field.</div>
         </div>
-        <div class="form-group">
-            <label for="uemail">Email:</label>
-            <input type="email" value="${principal.user.email}" class="form-control" id="uemail" placeholder="Enter Email" name="uemail" required>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
-        </div>
-        <div class="form-group">
-            <label for="pwd">Password:</label>
-            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
-        </div>
+        <c:if test="${empty principal.user.oauth}">
+
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+        </c:if>
+
+
     </form>
     <button id="btn-update" class="btn btn-primary">수정 완료</button>
 </div>

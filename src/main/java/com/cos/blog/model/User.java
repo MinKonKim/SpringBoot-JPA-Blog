@@ -39,6 +39,8 @@ public class User {
     @Enumerated(EnumType.STRING) // RoleType 은 String 타입이다.
     private RoleType role; //ADMIN, USER
 
+    private String oauth; //kakao, google
+
     @CreationTimestamp // 시간이 자동으로 입력
     private Timestamp createDate;
 }

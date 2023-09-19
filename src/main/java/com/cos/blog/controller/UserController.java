@@ -128,6 +128,7 @@ public class UserController {
                 .username(nickname+"_"+id)
                 .password(cosKey)
                 .email(email)
+                .oauth("kakao")
                 .build();
 
         //가입자 혹은 비가입자 체크해서 처리
