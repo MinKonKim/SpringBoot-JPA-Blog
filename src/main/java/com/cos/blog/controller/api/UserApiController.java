@@ -54,7 +54,9 @@ public class UserApiController {
         // 2. 변경된 사용자 정보를 포함하는 PrincipalDetail 객체 생성
         PrincipalDetail principalDetail = new PrincipalDetail(user); // 변경된 사용자 정보를 담은 UserDetails 객체 생성
         // 3. 새로운 UsernamePasswordAuthnticationToken 생성하여 인증 정보 업데이트
-        UsernamePasswordAuthenticationToken newAuthentication = new UsernamePasswordAuthenticationToken(principalDetail, authentication.getCredentials(), authentication.getAuthorities());
+        //    기존 인증 정보와 자격증명(credentials) 및 권한(authorities) 정보는 그대로 유지합니다.
+        UsernamePasswordAuthenticationToken newAuthentication =
+                new UsernamePasswordAuthenticationToken(principalDetail, authentication.getCredentials(), authentication.getAuthorities());
         // 4. SecurityContextHolder의 현재 인증 정보를 업데이트
         SecurityContextHolder.getContext().setAuthentication(newAuthentication);
 

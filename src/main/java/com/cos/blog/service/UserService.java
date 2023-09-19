@@ -15,12 +15,21 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service // Spring이 컴포넌트 스캔을 통해서 Bean에 등록을 gowna .IoC를 해준다.
 public class UserService {
+
+
     @Autowired
     private UserRepository userRepository;
 
     @Autowired
     private BCryptPasswordEncoder encoder;
 
+    @Transactional(readOnly = true)
+    public User 회원찾기(String username){
+        User user = userRepository.findByUsername(username).orElseGet(()->{
+            return new User();
+        });
+        return user;
+    }
 
     @Transactional
     public void 회원가입(User user) {
@@ -50,6 +59,8 @@ public class UserService {
 
         //회원수정 함수 종료시 == 서비스 종료 == 트랜잭션 종료 == commit이 자동으로 됨.
         // 더티체킹이 되어 변화된 것에 update문을 자동으로 날려줌
+
+        //세션 등록
 
 
 
